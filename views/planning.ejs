@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/public/planning1.css">
+    <script src="https://kit.fontawesome.com/850fde094c.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <title>Planning</title>
+</head>
+
+<body>
+    <button class="sidebarbtn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div id="sidebare" class="sidebar">
+        <ul>
+            <li><a href="/workspace">Profil</a></li>
+            <% if (title=="admin"){%>
+            <li><a href="/attente">Liste des etudiants En attente</a></li>
+            <%}%>
+            <% if (title=="admin" || title=="teacher" || title=="responsable"){%>
+
+            <li><a href="/profil?id=admin&niveau=1">Afficher planning L1</a></li>
+            <li><a href="profil?id=admin&niveau=2">Afficher planning L2</a></li>
+            <li><a href="profil?id=admin&niveau=3">Afficher planning L3</a></li>
+            <li><a href="profil?id=admin&niveau=4">Afficher planning M1</a></li>
+            <li><a href="profil?id=admin&niveau=5">Afficher planning M2</a></li>
+            <%} %>
+            
+            
+           
+        </ul>
+    </div>
+    <nav class="menu">
+        <h1>Modification de planning </h1>
+        <ul>
+            <li><a href="#">Bonjour <span><%=title%></span></a></li>
+            <li><a href="/logout"><i class="fas fa-sign-out-alt"></i></a></li>
+        </ul>
+        </nav>
+        <div class="container">
+            <div class="tab tab-1">
+                <table id="table" border="1">
+                    <tr>
+                        <th>heures\date</th>
+                        <th>Dimanche</th>
+                        <th>Lundi</th>
+                        <th>Mardi</th>
+                        <th>Mercredi</th>
+                        <th>Jeudi</th>
+                    </tr>
+                    <tr>
+                        <th>08:00h-09:30h</th>
+                        
+                        <td>
+                            <ul id="list11">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul id="list12">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul id="list13">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul id="list14">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul id="list15">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>09:30h-11:00h</th>
+                        <td>
+                            <ul id="list21">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul id="list22">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul id="list23">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul id="list24">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul id="list25">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>11:00h-12:30h</th>
+                        <td>
+                            <ul id="list31">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul id="list32">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul id="list33">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul id="list34">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul id="list35">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>12:30h-14:00h</th>
+                        <td>
+                            <ul id="list41">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul id="list42">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul id="list43">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul id="list44">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul id="list45">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>14:00h-15:30h</th>
+                        <td>
+                            <ul id="list51">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul id="list52">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul id="list53">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul id="list54">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul id="list55">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>15:30h-17:00h</th>
+                        <td>
+                            <ul id="list61">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul id="list62">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+
+                            </ul>
+                        </td>
+                        <td>
+                            <ul id="list63">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </td>
+                        <td>
+                        
+                            <ul id="list64">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+
+                                <li></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul id="list65">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <span>    
+        </span>
+
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Modification de temps</h2>
+                <form method="post" accept-charset="UTF-8">
+                    <div class="inp">
+                        <select id="nom_module" name="nom_module" class="inpp"> 
+                            <option value="0">Sélectionnez le nom du module</option>
+                            <option value="SE1">Système d'exploitation 1 </option>
+                            <option value="SE2">Système d'exploitation 2</option>
+                            <option value="IHM">Interface Homme-Maching</option>
+                            <option value="PL">Programmation linéare</option>
+                            <option value="POO">Programmation Orientée Objet</option>
+                            <option value="SI">Système d'information</option>
+                          </select>
+                          <select id="nom_salle" name="nom_salle" class="inpp"> 
+                            <option value="0">Sélectionnez le nom du salle</option>
+                            <option value="E8-1">E8-1</option>
+                            <option value="E8-2">E8-2</option>
+                            <option value="E8-3">E8-3</option>
+                            <option value="E8-4">E8-4</option>
+                            <option value="E8-5">E8-5</option>
+                            <option value="E8-6">E8-6</option>
+                          </select>
+                          <select id="nom_ens" name="nom_ens" class="inpp"> 
+                            <option value="0">Sélectionnez le nom du ensigniant</option>
+                            <option value="seridi">seridi ali</option>
+                            <option value="halaci">halaci samir</option>
+                            <option value="farou">farou ibrahim</option>
+                            <option value="Khabizi">Khabizi ali</option>
+                            <option value="zedadra">zedadra lamia</option>
+                          </select>
+                          <select id="type" name="type" class="inpp"> 
+                            <option value="0">Sélectionnez etat salle</option>
+                            <option value="tp">TP </option>
+                            <option value="td">TD </option>
+                            <option value="cours">Cours</option>
+                          </select>
+                    </div>
+                    <input value="save" class="btn" onclick="EditRowInput();">
+                    <input value="supprimer" class="btn" onclick="SupprimerSeance();">
+                    <input value="valider" class="btn" type="button" onclick="ValiderSeance();">
+
+                </form>
+
+            </div>
+
+        </div>
+        <!--
+      <script type="text/javascript">
+        $(".inp input").on("focus",function(){
+            $(this).addClass("focus");
+        });
+
+        $(".inp input").on("blur",function(){
+           if($(this).val() == "") 
+           $(this).removeClass("focus");
+        });
+        </script>
+        -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script>
+            //var
+            var params = new URLSearchParams(window.location.search);
+                var niveau = params.get('niveau');
+                var jsonObject=<%- JSON.stringify (seance)  %>;
+
+        //     var after=JSON.stringify(adam);
+        //    console.log(adam, after)
+
+            var items = document.querySelectorAll("#list" + rIndex + "" + cIndex + " li");
+
+            var table = document.getElementById("table"),
+                /*listNode = document.getElementById("list"),
+                textNode = document.createTextNode(inputText.value),
+                liNode = document.createElement("Li"),*/
+                tab = [], index,
+                rIndex,
+                cIndex;
+            /*
+            //Add row
+            function AddtmTableRow() {
+                var newRow = table.insertRow(table.lenght),
+                    cell1 = newRow.insertCell(0),
+                    nom_module = document.getElementById("nom_module").value;
+                cell1.innerHTML = nom_module;
+            }
+    
+            //disply selected row data into onput text
+            function selectedRowToInput() {
+                for (var i = 1; i < table.rows.length; i++) {
+                    for(var j = 1; j < table.rows[i].cells.length;j++){
+                        table.rows[i].cells[j].onclick = function()
+                        {
+                         //get the selected row index
+                         rIndex = this.parentElement.rowIndex;
+                         cIndex = this.cellIndex;
+                         document.getElementById("nom_module").value = table.rows[rIndex].cells[cIndex].innerHTML;
+                     };
+                    }
+                }
+            }
+            selectedRowToInput();
+            */
+            
+            // console.log(type)
+            // function Test(){
+            //     var params = new URLSearchParams(window.location.search);
+            //     var type = params.get('id');
+            //     if (type=="admin"){
+            //         EditRowInput();
+            //     }
+            // }
+            // var url=window.location.href;
+            // console.log(url)
+            // var type=url.searchParams.get("id");
+            // console.log(type)
+            function ValiderSeance(){
+                var nom_module = document.getElementById("nom_module").value;
+                var nom_salle = document.getElementById("nom_salle").value;
+                var nom_ens = document.getElementById("nom_ens").value;
+                var type = document.getElementById("type").value;
+                var data = {
+                    rIndex,
+                    cIndex,
+                    niveau,
+                    type,
+                };
+                const options = {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                };
+                fetch('/validerseance/submit', options);
+            }
+            function EditRowInput() {
+                //liNode.appendChild(textNode);
+                //listNode.appendChild(listNode);
+               
+                var nom_module = document.getElementById("nom_module").value;
+                var nom_salle = document.getElementById("nom_salle").value;
+                var nom_ens = document.getElementById("nom_ens").value;
+                var type = document.getElementById("type").value;
+                var items = document.querySelectorAll("#list" + rIndex + "" + cIndex + " li");
+
+                items[0].innerHTML = nom_module;
+                items[1].innerHTML = nom_salle;
+                items[2].innerHTML = nom_ens;
+                
+               
+                modal.style.display = "none";
+                var data = {
+                    rIndex,
+                    cIndex,
+                    nom_module,
+                    nom_salle,
+                    nom_ens,
+                    niveau,
+                    type,
+                    validation
+                };
+                const options = {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                };
+                fetch('/seance/submit', options);   
+                
+               
+
+            }
+            function getUrlVars() {
+                var vars = {};
+                var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                    vars[key] = value;
+                });
+                return vars;
+            }
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            // const objSentFromSrv = <%=data%>;
+            // console.log(objSentFromSrv)
+            // console.log(title);
+                
+            // const options = {
+            //         method: 'GET',
+            //         headers: {
+            //             'Content-Type': 'application/json'
+            //         },
+            //     };
+            //     fetch('/profil', options).then(res=>{
+            //         console.log(res);
+            //     });
+            // jsonObject.forEach(element => console.log(element));
+            jsonObject.forEach(function(ele){
+                var nom_module = ele.nom_module;
+                var nom_salle = ele.nom_salle;
+                var nom_ens = ele.nom_ens;
+                var etat_seance=ele.validation;
+                var type=ele.type;
+                console.log(nom_ens+ " salle" + nom_salle);
+                var items = document.querySelectorAll("#list" + ele.heure + "" + ele.date_etudier + " li");
+                var params = new URLSearchParams(window.location.search);
+                var id = params.get('id');
+                if (id=="teacher" || id =="admin"){
+                    items[0].innerHTML = nom_module;
+                items[1].innerHTML = nom_salle;
+                items[2].innerHTML = nom_ens;
+                items[3].innerHTML=type;
+                items[4].innerHTML=etat_seance;
+
+                }
+                else{
+                    items[0].innerHTML = nom_module;
+                items[1].innerHTML = nom_salle;
+                items[2].innerHTML = nom_ens;
+                items[3].innerHTML=type;
+                }
+                if ((etat_seance=="enattante"||etat_seance=="valider"  )&&id=="student" ){ 
+                items[0].innerHTML = nom_module;
+                items[1].innerHTML = nom_salle;
+                items[2].innerHTML = nom_ens;
+                items[3].innerHTML=type;}
+                else{
+                items[0].innerHTML = nom_module;
+                items[1].innerHTML = nom_salle;
+                items[2].innerHTML = nom_ens;
+                items[3].innerHTML=type;
+                items[4].innerHTML=etat_seance;
+
+                }
+                
+            }
+            )
+            for (var i = 1; i < table.rows.length; i++) {
+                for (var j = 1; j < table.rows[i].cells.length; j++) {
+                    var params = new URLSearchParams(window.location.search);
+                    var type = params.get('id');
+                    var whois=<%-JSON.stringify(who)%>;
+                    if(whois=="admin" || whois=="teacher"){
+                        table.rows[i].cells[j].onclick = function () {
+                        modal.style.display = "block";
+                        rIndex = this.parentElement.rowIndex;
+                        cIndex = this.cellIndex;
+                        var items = document.querySelectorAll("#list" + rIndex + "" + cIndex + " li");
+                        document.getElementById("nom_module").value = items[0].innerHTML;
+                        document.getElementById("nom_salle").value = items[1].innerHTML;
+                        document.getElementById("nom_ens").value = items[2].innerHTML;
+                        document.getElementById("etat_seance").value=items[3].innerHTML;
+                    }
+              
+
+                    }
+                }
+            }
+        
+
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+        <script type="text/javascript">
+            $(function () {
+                $('.sidebarbtn').on('click', function (e) {
+                    $('.sidebar').toggleClass('active');
+                    $('.sidebarbtn').toggleClass('active');
+                    $('.menu').toggleClass('active');
+                    $('.container').toggleClass('active');
+    
+                    e.stopPropagation();
+                    return false;
+                });
+    
+                $('*:not(.sidebarbtn)').on('click', function () {
+                    $('.sidebar').removeClass('active');
+                    $('.sidebarbtn').removeClass('active');
+                    $('.menu').removeClass('active');
+                    $('.container').removeClass('active');
+                });
+    
+            });
+        </script>
+
+        <!-- <script type="text/javascript">
+            $(function () {
+                $('.sidebarbtn').on('click', function (e) {
+                    $('.sidebar').toggleClass('active');
+                    $('.sidebarbtn').toggleClass('active');
+                    $('.menu').toggleClass('active');
+
+                    e.stopPropagation();
+                    return false;
+                });
+
+                $('*:not(.sidebarbtn)').on('click', function () {
+                    $('.sidebar').removeClass('active');
+                    $('.sidebarbtn').removeClass('active');
+                    $('.menu').removeClass('active');
+                });
+
+            });
+        </script> -->
+</body>
+
+</html>

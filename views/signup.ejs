@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/850fde094c.js"></script>
+    <link rel="stylesheet" href="/public/signup.style.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="ulf-8"></script>
+    <title>Inscription</title>
+</head>
+
+<body>
+    <form action="/signup/submit" class="login-form" method="POST">
+        <a href="/"><i class="far fa-caret-square-left"></i></a>
+        <h1>Inscription</h1>
+        <div class="txtb">
+            <i class="fas fa-user-circle"></i>
+            <input type="text" name="num">
+            <span data-placeholder="Numéro d'étudiant"></span>
+        </div>
+        <div class="txtb">
+            <i class="fas fa-lock"></i>
+            <input type="text" name="nom">
+            <span data-placeholder="Nom d'étudiant"></span>
+        </div>
+        <div class="txtb">
+            <i class="fas fa-lock"></i>
+            <input type="text" name="prenom">
+            <span data-placeholder="Prenom d'etudiant"></span>
+        </div>
+        <div class="txtb">
+            <i class="fas fa-lock"></i>
+            <input type="text" name="address">
+            <span data-placeholder="Adresse"></span>
+        </div>
+        <div class="txtb">
+            <i class="fas fa-lock"></i>
+            <input type="text" name="number">
+            <span data-placeholder="Téléphone"></span>
+        </div>
+        <div class="txtb">
+            <i class="fas fa-lock"></i>
+            <input type="text" name="niveau">
+            <span data-placeholder="Niveau (de 1 jusqu'à 5)"></span>
+        </div>
+        <div class="txtb">
+            <i class="fas fa-lock"></i>
+            <input type="text" name="username">
+            <span data-placeholder="nom d'utilisateur"></span>
+        </div>
+        <div class="txtb">
+            <i class="fas fa-lock"></i>
+            <input type="password" name="password">
+            <span data-placeholder="password"></span>
+        </div>
+        <button class="logbtn" type="submit">submit</button>
+
+        <span style="color: red;"><%if(typeof error == "undefined"){%>
+            <% } else { %>
+            <%= error%>
+            <%}%></span>
+                
+                    <div class="bottom-text">
+                       You have account? <a href="/login?=student">Login</a>
+                    </div>
+            </form>
+            <script type="text/javascript">
+                $(".txtb input").on("focus", function () {
+                    $(this).addClass("focus");
+                });
+
+                $(".txtb input").on("blur", function () {
+                    if ($(this).val() == "")
+                        $(this).removeClass("focus");
+                });
+            </script>
+</body>
+</html>

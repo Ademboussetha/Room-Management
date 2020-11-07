@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/850fde094c.js"></script>
+    <link rel="stylesheet" href="/public/login.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Solway&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="ulf-8"></script>
+    <title>Login</title>
+</head>
+<body>   
+        <form action="/login/submit" method="POST" class="login-form">
+                <a href="/"><i class="far fa-caret-square-left"></i></a>
+                <h1>Login</h1>
+                <div class="txtb">
+                        <i class="fas fa-user-circle"></i>              
+                        <input type="text" name="username">
+                    <span data-placeholder="Username"></span>
+                </div>
+                <div class="txtb">
+                        <i class="fas fa-lock"></i>                    
+                        <input type="password" name="password">
+                        <span data-placeholder="password"></span>
+                    </div>
+                    <input type="submit" class="logbtn" value="Submit"> <br>
+                    <span style="color: red;font-size: large;">
+                        <%if(typeof error == "undefined"){%>
+                 <% } else { %>
+                         <%= error%>
+                    <%}%></span>
+                    <div class="bottom-text">
+                        Dont't have account? <a href="/signup">Sign up</a>
+                    </div>
+            </form>
+            <script type="text/javascript">
+            $(".txtb input").on("focus",function(){
+                $(this).addClass("focus");
+            });
+    
+            $(".txtb input").on("blur",function(){
+               if( $(this).val()== "") 
+               $(this).removeClass("focus");
+            });
+            </script>
+</body>
+</html>

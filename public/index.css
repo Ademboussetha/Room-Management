@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 10px;
+    font-family: 'Solway', serif;
+}
+
+body{
+    width: 100%;
+    height: 120vh;
+    background: #EFEDED;
+    overflow: hidden;
+}
+  /* menu */
+
+  .menu{
+    width: 90%;
+    height: 3rem;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+.menu h1{
+    font-size: 3rem;
+    font-weight: 900;
+}
+.menu ul{
+    display: flex;
+}
+
+.menu ul li{
+    list-style: none;
+}
+.menu ul li a{
+    text-decoration: none;
+}
+.menu ul li a{
+    color: #111;
+    padding: 1rem 0;
+    margin: 0 3rem;
+    position: relative;
+}
+.menu ul li a:last-child{
+    margin-right: 0;
+}
+.menu ul li a::before,
+.menu ul li a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: crimson;
+    left: 0;
+    transform: scaleX(0);
+    transition: all .5s;
+}
+.menu ul li a::before{
+    top: 0;
+    transform-origin: left;
+}
+.menu ul li a::after{
+    bottom: 0;
+    transform-origin: right;
+}
+.menu ul li a:hover::before,
+.menu ul li a:hover::after{
+   transform: scaleX(1);
+}
+    /* container */
+div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+div ul{
+    display: flex;
+}
+
+div ul a li{
+    text-align: center;
+    list-style: none;
+    background: #fff;
+    width: 400px;
+    height: 300px;
+    border-radius: 187px;
+    position: relative;
+}
+
+div ul a li:last-child{
+    margin-right: 0%;
+}
+
+div ul a{
+    text-decoration: none;
+    margin-right: 30px;
+    overflow: hidden;
+    transform: translateY(100rem);
+    animation: slideIn .5s forwards;
+}
+div ul a:nth-child(1){
+    animation-delay: .5s;
+}
+div ul a:nth-child(2){
+    animation-delay: 1s;
+}
+div ul a:nth-child(3){
+    animation-delay: 1.5s;
+}
+div ul a li i{
+    margin-top: 10%;
+    font-size: 120px;
+    margin-bottom: 20px;
+    color:  rgba(44, 44, 230, 0.857);
+    padding-bottom: 30px;
+    
+}
+div ul a li span{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    color: #111;
+}
+
+
+
+@keyframes slideIn{
+    from{
+
+    }
+    to{
+        transform: translateY(0);
+    }
+
+}
